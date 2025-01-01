@@ -1,20 +1,28 @@
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
-	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-	},
+	dependencies = { "saghen/blink.cmp" },
 	config = function()
 		local lspconfig = require("lspconfig")
 		local lspui = require("lspconfig.ui.windows")
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local blinkCmp = require("blink.cmp")
+		local capabilities = blinkCmp.get_lsp_capabilities()
 
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
+
+		-- borders on hover
+		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+			border = "single",
+			max_width = 70,
+		})
+		vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+			border = "single",
+			max_width = 70,
+		})
 
 		--LspInfo Borders
 		lspui.default_options.border = "double"
