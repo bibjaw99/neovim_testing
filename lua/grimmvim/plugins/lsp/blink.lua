@@ -54,7 +54,7 @@ return {
 			},
 		},
 		sources = {
-			default = { "luasnip", "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "luasnip", "buffer", "path", "snippets" },
 			cmdline = {},
 			providers = {
 				lsp = {
@@ -75,12 +75,6 @@ return {
 					enabled = true,
 					name = "LSP",
 					module = "blink.cmp.sources.buffer",
-					score_offset = 70,
-				},
-				path = {
-					enabled = true,
-					name = "LSP",
-					module = "blink.cmp.sources.path",
 					score_offset = 80,
 				},
 				snippets = {
@@ -88,6 +82,12 @@ return {
 					name = "LSP",
 					module = "blink.cmp.sources.snippets",
 					score_offset = 75,
+				},
+				path = {
+					enabled = true,
+					name = "LSP",
+					module = "blink.cmp.sources.path",
+					score_offset = 70,
 				},
 			},
 		},
