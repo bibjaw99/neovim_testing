@@ -2,7 +2,10 @@ return {
 	"saghen/blink.cmp",
 	event = "InsertEnter",
 	version = "1.*",
-	dependencies = { "rafamadriz/friendly-snippets" },
+	dependencies = {
+		"rafamadriz/friendly-snippets",
+		"L3MON4D3/LuaSnip",
+	},
 	opts = {
 		keymap = {
 			preset = "enter",
@@ -38,6 +41,7 @@ return {
 				enabled = true,
 			},
 		},
+		snippets = { preset = "luasnip" },
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},
