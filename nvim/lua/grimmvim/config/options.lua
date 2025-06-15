@@ -35,7 +35,7 @@ opt.smartindent = true
 opt.autoindent = true
 opt.expandtab = true
 
--- opt.fillchars = { eob = " " }
+opt.fillchars = { eob = " " }
 
 opt.clipboard = "unnamedplus"
 opt.backspace = "indent,eol,start"
