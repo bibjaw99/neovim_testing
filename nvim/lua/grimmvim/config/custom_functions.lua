@@ -20,15 +20,11 @@ function OpenFile()
 	end
 end
 
--- Save original
-local open = vim.lsp.util.open_floating_preview
--- Override
+-- lsp floating window modifications
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
 	opts = opts or {}
 	opts.border = opts.border or "rounded"
-	opts.max_width = opts.max_width or 80 -- max width in columns
-	opts.max_height = opts.max_height or 20 -- optional max height in lines
-	opts.wrap = opts.wrap == nil and true or opts.wrap
-	opts.wrap_at = opts.wrap_at or opts.max_width
-	return open(contents, syntax, opts, ...)
+	opts.max_width = opts.max_width or 80
+	return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end

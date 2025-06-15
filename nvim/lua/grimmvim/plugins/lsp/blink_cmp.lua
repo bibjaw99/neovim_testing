@@ -13,8 +13,8 @@ return {
 			["<C-e>"] = { "hide", "fallback" },
 			["<CR>"] = { "accept", "fallback" },
 
-			["<Tab>"] = { "snippet_forward", "fallback" },
-			["<S-Tab>"] = { "snippet_backward", "fallback" },
+			["<C-j>"] = { "snippet_forward", "fallback" },
+			["<C-k>"] = { "snippet_backward", "fallback" },
 
 			["<Up>"] = { "select_prev", "fallback" },
 			["<Down>"] = { "select_next", "fallback" },
@@ -24,7 +24,7 @@ return {
 			["<C-b>"] = { "scroll_documentation_up", "fallback" },
 			["<C-f>"] = { "scroll_documentation_down", "fallback" },
 
-			["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
+			["<C-s>"] = { "show_signature", "hide_signature", "fallback" },
 		},
 		appearance = {
 			nerd_font_variant = "mono",
@@ -38,7 +38,7 @@ return {
 				border = "rounded",
 			},
 			ghost_text = {
-				enabled = true,
+				enabled = false,
 			},
 		},
 		snippets = { preset = "luasnip" },

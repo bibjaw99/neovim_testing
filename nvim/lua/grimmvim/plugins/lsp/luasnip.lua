@@ -19,15 +19,14 @@ return {
 				"cfor",
 				fmt(
 					[[
-            for ( {}; {}; {} ) {{
+            for ( int i={}; i<{}; i++ ) {{
               {}
             }}
           ]],
 					{
-						i(1, "int i=0"),
-						i(2, "i<size"),
-						i(3, "i++"),
-						i(4),
+						i(1, "0"),
+						i(2, "n"),
+						i(0),
 					}
 				)
 			),
@@ -37,9 +36,7 @@ return {
 				"temp",
 				fmt(
 					[[
-            #include <cmath>
-            #include <cstring>
-            #include <iostream>
+            #include <bits/stdc++.h>
             using namespace std;
 
             int main() {{
