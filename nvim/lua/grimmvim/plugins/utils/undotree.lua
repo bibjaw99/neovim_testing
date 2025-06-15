@@ -1,6 +1,6 @@
 return {
 	"mbbill/undotree",
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local map = vim.keymap.set
 

@@ -1,10 +1,9 @@
 return {
 	"saghen/blink.cmp",
-	event = "InsertEnter",
+	event = { "BufReadPre", "BufNewFile" },
 	version = "1.*",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		"L3MON4D3/LuaSnip",
 	},
 	opts = {
 		keymap = {
@@ -41,7 +40,6 @@ return {
 				enabled = false,
 			},
 		},
-		snippets = { preset = "luasnip" },
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},

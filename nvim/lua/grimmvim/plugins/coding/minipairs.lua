@@ -1,6 +1,10 @@
 return {
 	"echasnovski/mini.pairs",
-	event = { "BufEnter" },
+	event = {
+		"BufReadPost",
+		"BufNewFile",
+		"BufWritePre",
+	},
 	version = false,
 	opts = {
 		modes = {
