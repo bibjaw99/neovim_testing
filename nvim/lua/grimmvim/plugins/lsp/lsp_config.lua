@@ -18,6 +18,7 @@ return {
 			},
 			pyright = {},
 			ts_ls = {},
+			eslint = {},
 			rust_analyzer = {
 				settings = {
 					["rust-analyzer"] = {},

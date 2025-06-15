@@ -99,3 +99,17 @@ map("i", "<C-;>", "<esc>A;<esc>i", { desc = "semicolon at the end", noremap = tr
 
 -- lsp keymaps
 map("n", "<leader>lk", ":lua vim.lsp.buf.hover()<cr>", { desc = "LSP Hover", noremap = true, silent = true })
+map("n", "<leader>ld", ":lua vim.lsp.buf.definition()<cr>", { desc = "LSP Definition", noremap = true, silent = true })
+map(
+	"n",
+	"<leader>dn",
+	":lua vim.diagnostic.goto_next()<cr>",
+	{ desc = "LSP Next Diagnostic", noremap = true, silent = true }
+)
+
+map(
+	"n",
+	"<leader>dp",
+	":lua vim.diagnostic.goto_prev()<cr>",
+	{ desc = "LSP Previous Diagnostic", noremap = true, silent = true }
+)

@@ -5,7 +5,7 @@ return {
 		ft = { "markdown" },
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = "cd app && yarn install",
-		init = function()
+		config = function()
 			local map = vim.keymap.set
 			vim.g.mkdp_filetypes = { "markdown" }
 			vim.cmd("let g:mkdp_theme = 'light'")
