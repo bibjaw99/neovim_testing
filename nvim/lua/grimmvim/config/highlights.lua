@@ -13,10 +13,10 @@ hl(0, "Pmenu", { link = "Normal" })
 hl(0, "PmenuSel", { link = "Search" })
 
 -- -- blink cmp
--- hl(0, "BlinkCmpMenu", { link = "Normal" })
--- hl(0, "BlinkCmpMenuBorder", { link = "Normal" })
--- hl(0, "BlinkCmpMenuSelection", { link = "Search" })
--- hl(0, "BlinkCmpLabelMatch", { link = "Search" })
+hl(0, "BlinkCmpMenu", { link = "Normal" })
+hl(0, "BlinkCmpMenuBorder", { link = "Normal" })
+hl(0, "BlinkCmpMenuSelection", { link = "Search" })
+hl(0, "BlinkCmpLabelMatch", { link = "Search" })
 
 -- -- snacks dashboard
 hl(0, "SnacksDashboardHeader", { fg = "#d8a657" })

@@ -253,5 +253,12 @@ return {
 			':lua require("snacks").picker.lsp_references()<cr>',
 			desc = "LSP References",
 		},
+		-- toggle term
+		{
+			mode = "n",
+			"<C-q>",
+			':lua require("snacks").terminal.toggle()<cr>',
+			desc = "Toggle Term",
+		},
 	},
 }

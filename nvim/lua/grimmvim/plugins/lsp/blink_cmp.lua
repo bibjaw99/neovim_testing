@@ -1,6 +1,6 @@
 return {
 	"saghen/blink.cmp",
-	event = { "CmdlineEnter", "BufReadPre", "BufNewFile" },
+	event = { "InsertEnter", "CmdlineEnter" },
 	version = "1.*",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
@@ -35,6 +35,7 @@ return {
 			},
 			menu = {
 				border = "rounded",
+				scrollbar = false,
 			},
 			ghost_text = {
 				enabled = false,
