@@ -102,14 +102,14 @@ map("n", "<leader>lk", ":lua vim.lsp.buf.hover()<cr>", { desc = "LSP Hover", nor
 map("n", "<leader>ld", ":lua vim.lsp.buf.definition()<cr>", { desc = "LSP Definition", noremap = true, silent = true })
 map(
 	"n",
-	"<leader>dn",
+	"<leader>ln",
 	":lua vim.diagnostic.goto_next()<cr>",
 	{ desc = "LSP Next Diagnostic", noremap = true, silent = true }
 )
 
 map(
 	"n",
-	"<leader>dp",
+	"<leader>lN",
 	":lua vim.diagnostic.goto_prev()<cr>",
 	{ desc = "LSP Previous Diagnostic", noremap = true, silent = true }
 )

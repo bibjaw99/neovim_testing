@@ -1,10 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
-	event = {
-		"BufReadPost",
-		"BufNewFile",
-		"BufWritePre",
-	},
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local map = vim.keymap.set
 		require("gitsigns").setup({

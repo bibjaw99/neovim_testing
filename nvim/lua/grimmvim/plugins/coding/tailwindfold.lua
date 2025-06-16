@@ -2,7 +2,15 @@ return {
 	"razak17/tailwind-fold.nvim",
 	opts = {},
 	dependencies = { "nvim-treesitter/nvim-treesitter" },
-	event = { "BufEnter *.js", "BufEnter *.jsx", "BufEnter *.ts", "BufEnter *.tsx", "BufEnter *.html" },
+	ft = {
+		"javascriptreact",
+		"typescriptreact",
+		"javascript",
+		"typescript",
+		"html",
+		"vue",
+		"php",
+	},
 	config = function()
 		require("tailwind-fold").setup({
 			ft = {
